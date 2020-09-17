@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Shopify Starter`,
     description: `Gatsby & Shopify Starter for the WebDevEducation course.`,
-    author: `@tomphill`,
+    author: `Lawrence O. Caulker`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -15,6 +15,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
+          `open sans\:300`,
+          `open sans:300i`,
           `open sans\:400`,
           'open sans:400i',
           `open sans\:700`,
@@ -24,14 +26,14 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-source-shopify',
-      options: {
-        shopName: process.env.GATSBY_SHOP_NAME,
-        accessToken: process.env.GATSBY_ACCESS_TOKEN,
-        apiVersion: '2020-07',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-shopify',
+    //   options: {
+    //     shopName: process.env.GATSBY_SHOP_NAME,
+    //     accessToken: process.env.GATSBY_ACCESS_TOKEN,
+    //     apiVersion: '2020-07',
+    //   },
+    // },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
